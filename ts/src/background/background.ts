@@ -34,6 +34,9 @@ class BackgroundController {
     overwolf.extensions.onAppLaunchTriggered.addListener(
       e => this.onAppLaunchTriggered(e)
     );
+
+    overwolf.settings.hotkeys.onHold.addListener((e) => { console.log('onHold event:', e) });
+    overwolf.settings.hotkeys.onPressed.addListener((e) => { console.log('onPressed event:', e) });
   };
 
   // Implementing the Singleton design pattern
